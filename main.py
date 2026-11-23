@@ -1,1 +1,27 @@
-print("Hello, world!")
+def is_prime(n):
+    lst = [1]
+    if n == 2:
+        return True
+    if n == 1:
+        return False
+    for i in range(2, n):
+        if n % i == 0:
+            lst.append(i)
+    if len(lst) == 1:
+        return True
+    else:
+        return False
+
+
+
+assert is_prime(2)
+assert is_prime(3)
+assert is_prime(7)
+assert is_prime(13)
+
+assert not is_prime(1)
+assert not is_prime(4)
+assert not is_prime(9)
+assert not is_prime(15)
+
+print("All tests passed!")
